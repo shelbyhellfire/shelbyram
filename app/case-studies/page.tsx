@@ -3,6 +3,15 @@ import Link from "next/link";
 
 const caseStudies = [
   {
+    title: "Hire a Hubby MN",
+    slug: "hire-a-hubby",
+    description:
+      "Creating a conversion-focused website for a home maintenance business with trust-building design.",
+    date: "2024",
+    readTime: "15 min read",
+    tags: ["Web Design", "Conversion UX", "Next.js"],
+  },
+  {
     title: "When Does My Kid Dance?",
     slug: "when-does-my-kid-dance",
     description:
@@ -29,15 +38,6 @@ const caseStudies = [
     readTime: "8 min read",
     tags: ["Component Library", "Next.js", "Tailwind"],
   },
-  {
-    title: "SaaS Dashboard Redesign",
-    slug: "saas-dashboard",
-    description:
-      "Redesigning a complex dashboard that improved user satisfaction by 60%.",
-    date: "2023",
-    readTime: "12 min read",
-    tags: ["UX Research", "React", "Data Visualization"],
-  },
 ];
 
 export default function CaseStudiesPage() {
@@ -54,7 +54,11 @@ export default function CaseStudiesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {caseStudies.map((study) => (
-            <Link key={study.slug} href={`/case-studies/${study.slug}`}>
+            <Link
+              key={study.slug}
+              href={`/case-studies/${study.slug}`}
+              scroll={false}
+            >
               <Card className="h-full cursor-pointer">
                 <div className="flex justify-between items-start mb-3">
                   <span className="text-sm text-gray-500 dark:text-gray-400">

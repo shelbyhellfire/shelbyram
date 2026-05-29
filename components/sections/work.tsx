@@ -7,36 +7,44 @@ import { Card } from "../ui/card";
 
 const projects = [
   {
+    title: "Enterprise Angular Design System",
+    description:
+      "Enterprise-grade Angular design system with automated design token pipeline, 50+ Material Design 3 components, and 1000+ utility classes serving financial institution applications.",
+    image: "/projects/design-system.jpg",
+    tags: ["Angular", "Material Design 3", "Design Tokens", "Storybook"],
+    link: "/case-studies/uxdc-design-system",
+  },
+  {
+    title: "Enterprise USWDS Design System",
+    description:
+      "React component library extending USWDS with 60+ production-ready components, dual theme architecture, and full WCAG 2.1 AA compliance for financial institution.",
+    image: "/projects/design-system.jpg",
+    tags: ["React", "TypeScript", "USWDS", "Accessibility"],
+    link: "/case-studies/mpls-design-system",
+  },
+  {
+    title: "Enterprise React Component Library",
+    description:
+      "Comprehensive React component library with 50+ accessible components built on USWDS standards, serving thousands of users across enterprise applications.",
+    image: "/projects/component-library.jpg",
+    tags: ["React", "TypeScript", "Storybook", "USWDS"],
+    link: "/case-studies/trim-design-system",
+  },
+  {
+    title: "Hire a Hubby MN",
+    description:
+      "Professional home maintenance website with conversion-focused design, trust-building UX, and seamless booking integration.",
+    image: "/projects/hire-a-hubby.jpg",
+    tags: ["Next.js", "Web Design", "Conversion Optimization", "Mobile-First"],
+    link: "/case-studies/hire-a-hubby",
+  },
+  {
     title: "When Does My Kid Dance?",
     description:
-      "A parent-focused dance competition schedule app solving the chaos of tracking multiple performers with smart search and color-coded results.",
+      "Parent-focused dance competition schedule app solving the chaos of tracking multiple performers with smart search and color-coded results.",
     image: "/projects/dance-app.jpg",
     tags: ["Next.js", "React", "UX Design", "Mobile-First"],
     link: "/case-studies/when-does-my-kid-dance",
-  },
-  {
-    title: "Enterprise Design System",
-    description:
-      "Built a comprehensive design system with 50+ components, serving 200+ developers across multiple products.",
-    image: "/projects/design-system.jpg",
-    tags: ["React", "TypeScript", "Storybook", "Design Tokens"],
-    link: "/case-studies/enterprise-design-system",
-  },
-  {
-    title: "E-commerce Component Library",
-    description:
-      "Created a reusable component library that reduced development time by 40% and improved consistency.",
-    image: "/projects/component-library.jpg",
-    tags: ["Next.js", "Tailwind", "Accessibility", "Performance"],
-    link: "/case-studies/ecommerce-components",
-  },
-  {
-    title: "SaaS Dashboard Redesign",
-    description:
-      "Redesigned and rebuilt a complex dashboard, improving user satisfaction by 60% and reducing support tickets.",
-    image: "/projects/dashboard.jpg",
-    tags: ["React", "D3.js", "UX Research", "Responsive Design"],
-    link: "/case-studies/saas-dashboard",
   },
 ];
 
@@ -59,7 +67,7 @@ export function Work() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Link key={project.title} href={project.link}>
+            <Link key={project.title} href={project.link} scroll={false}>
               <Card className="h-full cursor-pointer">
                 <div className="relative h-48 mb-4 bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900 dark:to-accent-900 rounded-lg overflow-hidden">
                   {/* Placeholder for project image */}

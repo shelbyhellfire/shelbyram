@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Button } from '../ui/button';
+import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                UX Frontend Developer
+                Design Systems Engineer
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4">
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-16 flex justify-center space-x-8 text-sm text-gray-600 dark:text-gray-400"
           >
-            <div className="flex flex-col items-center">
+            {/* <div className="flex flex-col items-center">
               <span className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
                 5+
               </span>
@@ -64,7 +64,7 @@ export function Hero() {
                 10+
               </span>
               <span>Design Systems</span>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
