@@ -1,48 +1,57 @@
-'use client';
+"use client";
 
-import { Card } from '../ui/card';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { Card } from "../ui/card";
 
 const skills = [
   {
-    category: 'Frontend Development',
+    category: "Frontend Development",
     items: [
-      'React / Next.js',
-      'TypeScript',
-      'HTML5 / CSS3',
-      'Tailwind CSS',
-      'Styled Components',
+      "React / Next.js",
+      "TypeScript",
+      "HTML5 / CSS3",
+      "Tailwind CSS",
+      "Styled Components",
     ],
   },
   {
-    category: 'Design Systems',
+    category: "Design Systems",
     items: [
-      'Component Architecture',
-      'Design Tokens',
-      'Storybook',
-      'Figma / Sketch',
-      'Accessibility (WCAG)',
+      "Component Architecture",
+      "Design Tokens",
+      "Storybook",
+      "Figma / Sketch",
+      "Accessibility (WCAG)",
     ],
   },
   {
-    category: 'Tools & Workflow',
-    items: ['Git / GitHub', 'NPM / Yarn', 'Webpack / Vite', 'Jest / Testing Library', 'CI/CD'],
+    category: "Tools & Workflow",
+    items: [
+      "Git / GitHub",
+      "NPM / Yarn",
+      "Webpack / Vite",
+      "Jest / Testing Library",
+      "CI/CD",
+    ],
   },
   {
-    category: 'UX Skills',
+    category: "UX Skills",
     items: [
-      'User Research',
-      'Wireframing',
-      'Prototyping',
-      'Responsive Design',
-      'Design-Dev Collaboration',
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Responsive Design",
+      "Design-Dev Collaboration",
     ],
   },
 ];
 
 export function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section
+      id="about"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,10 +61,12 @@ export function About() {
         >
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            I'm a UX-focused frontend developer with a passion for creating beautiful,
-            accessible, and performant user interfaces. My unique blend of design
-            understanding and technical expertise allows me to build design systems that
-            scale.
+            I'm a frontend prototyper and UX engineer who excels at the
+            intersection of user experience and technical implementation. I
+            rapidly bring ideas to life through interactive prototypes,
+            understand what users truly need, and translate that into polished,
+            production-ready code. Whether it's exploring new concepts or
+            scaling design systems, I master the front of the frontend.
           </p>
         </motion.div>
 
@@ -99,24 +110,27 @@ export function About() {
           <h3 className="text-2xl font-bold mb-4">What I Bring to Your Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div>
-              <div className="text-4xl mb-2">🎨</div>
-              <h4 className="font-semibold mb-2">Design Understanding</h4>
+              <div className="text-4xl mb-2">🚀</div>
+              <h4 className="font-semibold mb-2">Rapid Prototyping</h4>
               <p className="text-sm opacity-90">
-                I speak designer and developer, ensuring seamless collaboration
+                Transform concepts into interactive prototypes in days, not
+                weeks
               </p>
             </div>
             <div>
-              <div className="text-4xl mb-2">⚡</div>
-              <h4 className="font-semibold mb-2">Performance First</h4>
+              <div className="text-4xl mb-2">🎯</div>
+              <h4 className="font-semibold mb-2">User-Centered Mindset</h4>
               <p className="text-sm opacity-90">
-                Fast, optimized code that scales with your product
+                I understand user needs and translate them into exceptional
+                experiences
               </p>
             </div>
             <div>
-              <div className="text-4xl mb-2">♿</div>
-              <h4 className="font-semibold mb-2">Accessibility Focused</h4>
+              <div className="text-4xl mb-2">💎</div>
+              <h4 className="font-semibold mb-2">Production Excellence</h4>
               <p className="text-sm opacity-90">
-                Building inclusive experiences for everyone
+                From prototype to polished product with accessible, performant
+                code
               </p>
             </div>
           </div>

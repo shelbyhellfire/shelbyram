@@ -7,6 +7,14 @@ import { Card } from "../ui/card";
 
 const projects = [
   {
+    title: "When Does My Kid Dance?",
+    description:
+      "Parent-focused dance competition schedule app solving the chaos of tracking multiple performers with smart search and color-coded results.",
+    image: "/projects/dance-app.jpg",
+    tags: ["Next.js", "React", "UX Design", "Mobile-First"],
+    link: "/case-studies/when-does-my-kid-dance",
+  },
+  {
     title: "Enterprise Angular Design System",
     description:
       "Enterprise-grade Angular design system with automated design token pipeline, 50+ Material Design 3 components, and 1000+ utility classes serving financial institution applications.",
@@ -37,14 +45,6 @@ const projects = [
     image: "/projects/hire-a-hubby.jpg",
     tags: ["Next.js", "Web Design", "Conversion Optimization", "Mobile-First"],
     link: "/case-studies/hire-a-hubby",
-  },
-  {
-    title: "When Does My Kid Dance?",
-    description:
-      "Parent-focused dance competition schedule app solving the chaos of tracking multiple performers with smart search and color-coded results.",
-    image: "/projects/dance-app.jpg",
-    tags: ["Next.js", "React", "UX Design", "Mobile-First"],
-    link: "/case-studies/when-does-my-kid-dance",
   },
 ];
 

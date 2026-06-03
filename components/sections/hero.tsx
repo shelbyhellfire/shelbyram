@@ -15,15 +15,16 @@ export function Hero() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                Design Systems Engineer
+                Frontend Prototyper & UX Engineer
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4">
-              Bridging the gap between design and code
+              Master of the front of the frontend
             </p>
             <p className="text-lg text-gray-500 dark:text-gray-500 mb-8 max-w-2xl mx-auto">
-              Specializing in component libraries, design systems, and creating
-              seamless user experiences with clean, maintainable code.
+              I rapidly transform ideas into interactive prototypes and
+              production-ready experiences. Understanding both what users need
+              and how to build it—bridging the gap between vision and reality.
             </p>
           </motion.div>
 
