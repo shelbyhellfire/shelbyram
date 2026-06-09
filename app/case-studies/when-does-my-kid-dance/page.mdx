@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Timeline:** 2023 - Present  
+**Timeline:** 2026 - Present  
 **Role:** UX Designer & Full-Stack Developer  
 **Tech Stack:** Next.js 15, TypeScript, Tailwind CSS, Vercel  
 **Type:** Personal Project - Real-World Tool  
@@ -13,6 +13,8 @@
 **When Does My Kid Dance?** is a web application designed to help parents and dance studios navigate the complexity of dance competition schedules. Built from a real-world pain point, this tool transforms dense, multi-day competition programs into an intuitive, searchable interface.
 
 **Live Site:** [whendoesmykiddance.shelbyramseth.com](https://whendoesmykiddance.shelbyramseth.com/)
+
+> **Note:** This is the MVP version of the product. Future iterations will include a self-service upload feature for dance studio owners and support for multiple studios and competitions on a single platform.
 
 ## The Problem
 
@@ -286,20 +288,60 @@ A database would be overkill. Static data was faster, simpler, and perfectly suf
 
 ## Future Enhancements
 
-### Planned Features
+### Current Status: MVP
 
+The live version represents the **Minimum Viable Product** - a focused solution that validates the core concept and user need. Real-world usage has confirmed the value proposition and informed the roadmap for future development.
+
+### Next Phase: Multi-Studio Platform
+
+The vision is to evolve from a single-competition tool into a comprehensive platform serving the dance competition community:
+
+#### **Studio Owner Dashboard**
+- **Self-Service Upload** - Dance studio owners can upload competition schedules directly
+- **Schedule Management** - Edit, update, and manage competition data
+- **Analytics** - Track usage, popular search terms, and parent engagement
+- **Branding Options** - Custom studio colors and logos
+
+#### **Multi-Competition Support**
+- **Competition Directory** - Browse schedules from multiple studios/competitions
+- **Unified Search** - Find dancers across different events
+- **Season Calendar** - View all upcoming competitions in one place
+- **Historical Data** - Access past competition schedules
+
+#### **Enhanced Parent Features**
 - **Calendar Export** - Add routines to phone calendar
-- **Notifications** - Optional alerts 30min before performances
-- **Custom Lists** - Save "favorite" routines
-- **Print View** - Optimized print layout for backup
-- **Multiple Competitions** - Switch between different events
+- **Push Notifications** - Optional alerts 30min before performances
+- **Custom Lists** - Save "favorite" dancers across competitions
+- **Social Sharing** - Share specific routines or schedules
 
-### Technical Improvements
+### Technical Roadmap
 
+**Phase 2: Backend Infrastructure**
+- Database architecture (PostgreSQL)
+- Authentication system for studio owners
+- File upload and parsing pipeline (PDF → structured data)
+- REST API for schedule management
+
+**Phase 3: Platform Features**
+- Multi-tenancy architecture
+- Studio subscription/payment system
+- Admin dashboard for schedule uploads
+- User accounts for saving preferences
+
+**Phase 4: Enhanced UX**
 - PWA functionality for offline access
-- Share functionality for specific dancers
 - QR code generation for easy sharing
-- Admin panel for schedule updates
+- Print-optimized views
+- Advanced filtering (by studio, date range, dancer level)
+
+### Why This Roadmap?
+
+**User Feedback:**
+> "Can we use this for our studio's other competitions?" - Studio Director
+
+> "I wish I could upload our schedule myself instead of waiting for you to do it." - Competition Organizer
+
+The MVP proved the concept. The next phase solves scalability and empowers studio owners to manage their own content.
 
 ## Technical Showcase
 
@@ -313,72 +355,6 @@ This project demonstrates:
 - ✅ **Component Thinking** - Reusable, composable React components
 - ✅ **TypeScript** - Type-safe data modeling
 - ✅ **User Testing** - Real-world validation and iteration
-
-## Code Highlights
-
-### Smart Filter Component
-
-```tsx
-interface FilterProps {
-  label: string;
-  options: string[];
-  value: string;
-  onChange: (value: string) => void;
-}
-
-const Filter: React.FC<FilterProps> = ({ 
-  label, 
-  options, 
-  value, 
-  onChange 
-}) => (
-  <div className="flex flex-col gap-2">
-    <label className="text-sm font-medium">{label}</label>
-    <select
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className="px-4 py-2 rounded-lg border"
-    >
-      <option value="">All {label}s</option>
-      {options.map(option => (
-        <option key={option} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
-  </div>
-);
-```
-
-### Routine Card Component
-
-```tsx
-const RoutineCard: React.FC<{ routine: Routine; color?: string }> = ({ 
-  routine, 
-  color 
-}) => (
-  <div 
-    className="bg-white rounded-lg p-4 shadow-md border-l-4"
-    style={{ borderLeftColor: color }}
-  >
-    <h3 className="font-bold text-lg mb-2">{routine.title}</h3>
-    <div className="grid grid-cols-2 gap-2 text-sm">
-      <div>
-        <span className="text-gray-600">Time:</span>
-        <span className="ml-2 font-medium">{routine.time}</span>
-      </div>
-      <div>
-        <span className="text-gray-600">Room:</span>
-        <span className="ml-2 font-medium">{routine.room}</span>
-      </div>
-      <div>
-        <span className="text-gray-600">Awards:</span>
-        <span className="ml-2 font-medium">{routine.awardsTime}</span>
-      </div>
-    </div>
-  </div>
-);
-```
 
 ## Conclusion
 

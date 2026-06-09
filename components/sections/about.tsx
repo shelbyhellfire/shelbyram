@@ -72,7 +72,7 @@ export function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {skills.map((skillGroup, index) => (
-            <Card key={skillGroup.category} hover={false}>
+            <Card key={skillGroup.category} hover={false} className="p-6">
               <h3 className="text-xl font-semibold mb-4 text-primary-600 dark:text-primary-400">
                 {skillGroup.category}
               </h3>

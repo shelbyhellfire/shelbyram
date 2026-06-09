@@ -1,5 +1,5 @@
-import type { MDXComponents } from 'mdx/types';
-import Image, { ImageProps } from 'next/image';
+import type { MDXComponents } from "mdx/types";
+import Image, { ImageProps } from "next/image";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -34,20 +34,22 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <a
         href={href}
         className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
-        target={href?.startsWith('http') ? '_blank' : undefined}
-        rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+        target={href?.startsWith("http") ? "_blank" : undefined}
+        rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
       >
         {children}
       </a>
     ),
     code: ({ children }) => (
-      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono">
+      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700">
         {children}
       </code>
     ),
     pre: ({ children }) => (
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4">
-        {children}
+      <pre className="bg-black p-6 rounded-lg overflow-x-auto mb-6 border border-gray-800">
+        <code className="text-white text-sm font-mono block leading-relaxed">
+          {children}
+        </code>
       </pre>
     ),
     blockquote: ({ children }) => (
@@ -58,7 +60,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     img: (props) => (
       <Image
         sizes="100vw"
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: "100%", height: "auto" }}
         {...(props as ImageProps)}
       />
     ),
